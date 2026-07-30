@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="jakarta.faces.html">
+<h:head>
+	<title>Geisternetz melden</title>
+</h:head>
+
+<h:body>
+	<h1>Geisternetz melden</h1>
+
+	<p>Hier kann ein gefundenes Geisternetz erfasst werden.</p>
+
+	<h:form>
+		<p>
+			Breitengrad:<br />
+			<h:inputText value="#{ghostNetBean.latitude}" />
+		</p>
+
+		<p>
+			Längengrad:<br />
+			<h:inputText value="#{ghostNetBean.longitude}" />
+		</p>
+
+		<p>
+			Geschätzte Größe:<br />
+			<h:inputText value="#{ghostNetBean.estimatedSize}" />
+		</p>
+
+		<p>
+			Name der meldenden Person (optional):<br />
+			<h:inputText value="#{ghostNetBean.reporterName}" />
+		</p>
+
+		<p>
+			Telefonnummer (optional):<br />
+			<h:inputText value="#{ghostNetBean.reporterPhone}" />
+		</p>
+
+		<p>
+			<h:commandButton value="Meldung speichern" action="#{ghostNetBean.saveGhostNet}" />
+		</p>
+
+	</h:form>
+
+	<p>
+		<h:link outcome="index" value="Zur Startseite" />
+	</p>
+</h:body>
+
+</html>

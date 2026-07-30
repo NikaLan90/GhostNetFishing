@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="jakarta.faces.html">
+<h:head>
+	<title>Bergung übernehmen</title>
+</h:head>
+
+<h:body>
+	<h1>Bergung übernehmen</h1>
+
+	<p>
+		Ausgewähltes Geisternetz:
+		<strong>
+			<h:outputText value="#{ghostNetBean.selectedGhostNetId}" />
+		</strong>
+	</p>
+
+	<h:form>
+		<p>
+			Name der bergenden Person:<br />
+			<h:inputText value="#{ghostNetBean.rescuerName}" />
+		</p>
+
+		<p>
+			Telefonnummer:<br />
+			<h:inputText value="#{ghostNetBean.rescuerPhone}" />
+		</p>
+
+		<h:commandButton value="Bergung übernehmen" action="#{ghostNetBean.assignRescuer}" />
+	</h:form>
+
+	<p>
+		<h:link outcome="offeneNetze" value="Zurück zu Übersicht" />
+	</p>
+</h:body>
+
+</html>
